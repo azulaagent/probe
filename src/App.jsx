@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { experiments, categories } from './data/experiments'
 import Home from './pages/Home'
@@ -15,7 +15,6 @@ export default function App() {
   const [customExperiments, setCustomExperiments] = useState([])
 
   const allExperiments = [...experiments, ...customExperiments]
-
   const filtered = selectedCategory
     ? allExperiments.filter(e => e.category === selectedCategory)
     : allExperiments
